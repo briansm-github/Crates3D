@@ -21,3 +21,5 @@ using the left and right keys, then press 'B' to begin.
 OK here in theory if the file format is converted)
 
 Please see the 'crates3d_TI83.txt' file for more detaled instructions.
+
+(If you download a ZIP file you might need to rename it from Crates3D-master.zip to just Crates3D.zip)
