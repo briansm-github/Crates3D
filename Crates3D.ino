@@ -84,7 +84,7 @@ void draw_map(int xmap, int ymap, int zuser, int angle)
   
   arduboy.fillScreen(1);
   
-  for (x=0; x<35; x++) for (y=0; y<32; y++) {
+  for (x=0; x<35; x++) for (y=0; y<34; y++) {
     if (angle==0) {xm=xmap+x-17; ym=ymap+16-y;}
     if (angle==1) {xm=xmap+16-y; ym=ymap+17-x;}
     if (angle==2) {xm=xmap+17-x; ym=ymap+y-16;}
