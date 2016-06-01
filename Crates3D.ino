@@ -266,6 +266,9 @@ int gameloop() {
         while(arduboy.pressed(A_BUTTON)) {delay(10); k++; if (k==200) return(0);}
       }   
     }
+    draw_map(x,y,z,angle);
+    print(0,0," Solved! "); arduboy.display();
+    while(!arduboy.pressed(B_BUTTON));
     level++; if (level==17) level=1;
   }
 }
