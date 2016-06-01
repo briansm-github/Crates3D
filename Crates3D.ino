@@ -57,9 +57,9 @@ void load()
 {
   int i;
 
-  for (i=0; i<768; i++) map3d[i]=EEPROM.read(i+128);
-  start_x=EEPROM.read(896); start_y=EEPROM.read(897); start_z=EEPROM.read(898);
-  end_x=EEPROM.read(899); end_y=EEPROM.read(900); end_z=EEPROM.read(901); 
+  for (i=0; i<768; i++) map3d[i]=EEPROM.read(i+150);
+  start_x=EEPROM.read(918); start_y=EEPROM.read(919); start_z=EEPROM.read(920);
+  end_x=EEPROM.read(921); end_y=EEPROM.read(922); end_z=EEPROM.read(923); 
 }
 
 //-----------------------------------------------------------------
@@ -69,9 +69,9 @@ void save()
 
   print(0,8,"SAVING......."); arduboy.display();
         
-  for (i=0; i<768; i++) EEPROM.write(i+128,map3d[i]);
-  EEPROM.write(896,x); EEPROM.write(897,y); EEPROM.write(898,z);
-  EEPROM.write(899,end_x); EEPROM.write(900,end_y); EEPROM.write(901,end_z);
+  for (i=0; i<768; i++) EEPROM.write(i+150,map3d[i]);
+  EEPROM.write(918,x); EEPROM.write(919,y); EEPROM.write(920,z);
+  EEPROM.write(921,end_x); EEPROM.write(922,end_y); EEPROM.write(923,end_z);
   print(0,8,"Saved to level 0."); arduboy.display();
   angle--; if (angle<0) angle=3;
   delay(1000);
