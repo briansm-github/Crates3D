@@ -13,8 +13,6 @@ byte start_x,start_y,start_z,end_x,end_y,end_z;
 int x,y,z,angle;
 byte level=1;
 
-
-
 //-----------------------------------------------------------
 void read_map(int stop_level)
 {
@@ -69,8 +67,7 @@ void save()
 {
   int i;
 
-
-   print(0,8,"SAVING......."); arduboy.display();
+  print(0,8,"SAVING......."); arduboy.display();
         
   for (i=0; i<768; i++) EEPROM.write(i+128,map3d[i]);
   EEPROM.write(896,x); EEPROM.write(897,y); EEPROM.write(898,z);
@@ -86,6 +83,7 @@ void draw_block_slow(int x, int y)
    arduboy.drawSlowXYBitmap(x,y,mask,8,10,0);
    arduboy.drawSlowXYBitmap(x,y,block,8,10,1);
 }
+
 //----------------------------------------------------------
 void draw_block(int x, int y)
 {
@@ -99,6 +97,7 @@ void draw_black_slow(int x, int y)
    arduboy.drawSlowXYBitmap(x,y,mask,8,10,0);
    arduboy.drawSlowXYBitmap(x,y,black,8,10,1);
 }
+
 //----------------------------------------------------------
 void draw_black(int x, int y)
 {
