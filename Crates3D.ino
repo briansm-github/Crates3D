@@ -259,7 +259,7 @@ int gameloop() {
       k=read_keys();
       while(!k) {first=1; delay(10); k=read_keys();} // idle loop
       if (ALLOW_SAVE && arduboy.pressed(A_BUTTON) && arduboy.pressed(B_BUTTON)) save();
-      if (first) {delay(100); first=0;} // allows for fine movement
+      if (first) {delay(150); first=0;} // allows for fine movement
       if (k>0 && k<5) move((k-1+angle)%4);
       if (k==5) { // 'A' key pressed... rorate view or reset level...
         angle++; if (angle==4) angle=0;
